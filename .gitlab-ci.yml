@@ -1,0 +1,11 @@
+image: docker:latest
+services:
+  - docker:dind
+
+stages:
+  - build
+
+build_image:
+  stage: build
+  script:
+    - docker build -t uas_kontak_app .
